@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import Link from 'next/link'
 
 export default function Nome() {
     const router = useRouter();
@@ -11,6 +12,9 @@ export default function Nome() {
             <p>Ao colocar em chaves a pasta id, será transformado em rotas dinamicas os componentes dentro da pasta: [id]</p>
             <p>O useRouter irá permitir acessar o ID passado pela url e também acessar outro parametro dinamico da URL, como por exemplo nome</p>
             <h3>Rotas / {codigo} / {nome}</h3>
+            <Link href="/rotas">
+                <button>Voltar</button>
+            </Link>
         </div>
     )
 }

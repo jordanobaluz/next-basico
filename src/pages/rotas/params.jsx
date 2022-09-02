@@ -1,4 +1,5 @@
 import { useRouter } from "next/dist/client/router"
+import Link from "next/link";
 
 export default function Params() {
     const router = useRouter()
@@ -10,6 +11,9 @@ export default function Params() {
         <div>
             <h1>Rotas Params: {id} e {nome} </h1>
             <p>Ao passar os parametros na URL, como por exemplo [params?nome=Jordano&id=1] é possível acessar os parametros na pagina</p>
+            <Link href="/rotas">
+                <button>Voltar</button>
+            </Link>
         </div>
     )
 }
