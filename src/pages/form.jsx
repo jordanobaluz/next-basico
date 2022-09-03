@@ -28,16 +28,39 @@ export default function Form() {
         })
     }
 
+    const estilo = {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+    }
+    const estiloDivInput = {
+        display: "flex",
+        width: "25rem",
+        justifyContent: "space-around",
+        paddingBottom: "0.5rem"
+    }
+    const estiloInput = {
+        width: "60%"
+    }
     return (
-        <div>
+        <div style={estilo}>
             <h1>Integrando com API #02</h1>
             <p>Após preencher os campos e clicar para enviar, será enviado ao backend as informações</p>
-            <input type="text"
-                value={nome}
-                onChange={e => setNome(e.target.value)} />
-            <input type="number"
-                value={idade}
-                onChange={e => setIdade(+e.target.value)} />
+            <div style={estiloDivInput}>
+                <span>Digite seu nome: </span>
+                <input type="text"
+                    value={nome}
+                    onChange={e => setNome(e.target.value)}
+                    placeholder={"Nome"}
+                    style={estiloInput} />
+            </div>
+            <div style={estiloDivInput}>
+                <span>Digite sua idade:</span>
+                <input type="number"
+                    value={idade}
+                    onChange={e => setIdade(+e.target.value)}
+                    style={estiloInput} />
+            </div>
             <button onClick={salvarUsuario}>Enviar</button>
 
             <p>E será exibido aqui as informações retornadas do backend</p>
