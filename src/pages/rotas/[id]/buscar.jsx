@@ -12,7 +12,7 @@ export default function Buscar() {
             <p>O useRouter irá permitir acessar o ID passado pela url</p>
             <h3>Rotas / {codigo} / Buscar</h3>
             <Link href="/rotas">
-                <button>Voltar</button>
+                <a><button>Voltar</button></a>
             </Link>
         </div>
     )

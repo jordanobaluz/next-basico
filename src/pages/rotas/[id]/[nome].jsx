@@ -12,7 +12,7 @@ export default function Nome() {
             <p>Ao colocar em chaves a pasta id, será transformado em rotas dinamicas os componentes dentro da pasta: [id]</p>
             <p>O useRouter irá permitir acessar o ID passado pela url e também acessar outro parametro dinamico da URL, como por exemplo nome</p>
             <h3>Rotas / {codigo} / {nome}</h3>
-            <Link href="/rotas">
+            <Link href="/rotas" passHref>
                 <button>Voltar</button>
             </Link>
         </div>
